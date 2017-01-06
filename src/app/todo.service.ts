@@ -17,8 +17,7 @@ constructor(private http:Http) {
  }
 
  private baseUrl: string = '/todolist';
-
-   getItems(): Observable<{}>{
+    getItems(): Observable<{}>{
        
     let people$ = this.http
       .get(`${this.baseUrl}`).map(response => response.json());
