@@ -13,10 +13,8 @@ server.listen(PORT,()=>{
 
 server.get('/',(req,res)=>{
   res.sendfile("indexs.html");
-
 });
 
 server.get('/todolist',(req,res)=>{
   res.json(LIST);
-
 });
