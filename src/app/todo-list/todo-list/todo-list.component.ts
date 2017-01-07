@@ -9,17 +9,16 @@ import { Observable } from 'rxjs/Rx';
 })
 export class TodoListComponent implements OnInit {
 
- private todoList:Array<any>;
+ private todoList:{};
 
  constructor(private todoService:TodoService){
-       this.todoList=todoService.todoList;
 
-    }
+   }
 
     getItems(){
 
       this.todoService.getItems().subscribe(
-        list => console.log(list),
+      list => this.todoList=list,
         error => console.error('Error: '),
         () => console.log('Completed!')
       );

@@ -1,8 +1,8 @@
-<div class="jumbotron">
-  todo-list works!
-
-  <button class="btn btn-primary" (click)="getItems()">GetItems</button>
-
- <app-todo-item *ngFor="let item of todoList" [todoContent]="item.content" [done]="item.done"></app-todo-item>
-
+<div class="panel panel-default">
+ <div class="panel panel-heading"> 
+   <button class="col-xs-12 btn btn-primary" (click)="getItems()">GetItems</button>
+   </div>
+ <div class="panel panel-body">
+    <app-todo-item class="col-xs-12 col-md-6" *ngFor="let item of todoList" [todoContent]="item.content" [done]="item.done"></app-todo-item>
+</div>
 </div>
