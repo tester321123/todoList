@@ -3,7 +3,7 @@ var server= express();
 var path=require("path");
 const PORT=3000;
 
-const LIST=[{content:"Go to work", done:true, id:1}, {content:"Go to Sleep", done:true, id:2},{content:"Go to Fitness", done:false, id:3}];
+const LIST=[{content:"Go to work", done:true},{content:"Buy food", done:true}, {content:"Go to Sleep", done:true},{content:"Go to Fitness", done:false}];
 
 server.use(express.static(path.join(__dirname+"/dist")));
 
